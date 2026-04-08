@@ -1,11 +1,12 @@
+properties([
+    pipelineTriggers([
+        pollSCM('* * * * *') // Her dakika (Dakika Saat Gün Ay HaftanınGünü)
+    ])
+])
+
 node {
-    stage("Selamla"){
-        
-        println("Hello World")
-
-        echo "hello"
-
-        sh 'date'
+    stage('Kontrol') {
+        checkout scm // Bu satır kritik! (Açıklaması aşağıda)
+        echo "Kontrol edildi: " + sh(script: 'date', returnStdout: true)
     }
-    
 }
