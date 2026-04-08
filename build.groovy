@@ -1,7 +1,11 @@
 node {
-    println("Hello World")
+    stage("Selamla"){
+        
+        println("Hello World")
 
-    echo "hello"
+        echo "hello"
 
-    sh 'date'
+        sh 'date'
+    }
+    
 }
