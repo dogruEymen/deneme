@@ -1,10 +1,8 @@
 node {
 
-
-    String name = "Eymen"
     stage("Selamla"){
         
-        println("Hello World ${name}")
+        println("Hello World ${params.NAME}")
 
         echo "hello"
 
